@@ -68,14 +68,6 @@ The project follows the standard Spring Boot MVC structure.
 2. Navigate to the project directory: `cd [project-directory]`
 3. Run the application: `./mvnw spring-boot:run`
 
-## Code on GitHub
-
-The source code is available on GitHub. You can find it [here](link-to-your-github-repository).
-
-## Screenshots
-
-[Include Screenshots of your application]
-
 ## Postman Collection
 
 A Postman collection containing the APIs for easy testing is included. You can find it in the `postman` directory.
@@ -85,3 +77,13 @@ A Postman collection containing the APIs for easy testing is included. You can f
 For detailed information about the application and its components, refer to the [Solution Document](link-to-solution-document).
 
 Feel free to reach out if you have any questions or issues.
+
+## Configuration
+
+- Backend
+  
+Update applicaion.properties file with your sql and smtp.mail details
+
+- Frontend
+
+Update utils/Axios.js base url of the API
