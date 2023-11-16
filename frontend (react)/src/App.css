@@ -1,0 +1,104 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.login-container .container{
+    max-width: 400px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(var(--border-color));
+    border-radius: 3px;
+    position: relative;
+    padding-top: 50px;
+}
+.login-container .logo{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--border-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: var(--background);
+}
+
+.login-container .title{
+  text-align: center;
+}
+.login-container .description{
+  text-align: center;
+  font-size: 13px;
+  color: rgb(169, 169, 169);
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.login-container form{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-container .checkbox{
+  display: flex;
+  font-size: 13px;
+  gap: 10px;
+  color: gray;
+  align-items: center;
+  margin: 10px 0;
+  flex-direction: row-reverse;
+}
+.login-container .checkbox input{
+  display: none;
+}
+.login-container .checkbox div{
+  height: 15px;
+  width: 15px;
+  border: 1px solid rgb(var(--border-color));
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.login-container .checkbox input:checked + div{
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+.login-container .checkbox input:checked + div::after{
+  content: '✓';
+}
+
+.login-container .reset{
+  color: var(--theme-color);
+  font-size: 14px;
+  text-decoration: underline;
+  align-self: flex-end;
+  margin: 10px 0;
+}
+.login-container .register{
+  text-align: center;
+  font-size: 14px;
+  color: rgb(169, 169, 169);
+  padding: 0 20px;
+}
+.login-container .register a{
+  color: var(--theme-color);
+  text-decoration: underline;
+}

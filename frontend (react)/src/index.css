@@ -1,0 +1,125 @@
+:root{
+  --theme-color: #4bafe1;
+  --border-color: 228, 228, 228;
+  --background: white;
+  --max-width: 1100px;
+  --border-radius: 12px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:is(
+  input[type=text], 
+  input[type=email], 
+  input[type=password],
+  input[type=number],
+  input[type=date],
+  select,
+  [custom-input]):not(.default){
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid rgb(var(--border-color));
+  border-radius: 5px;
+  outline-color: var(--theme-color);
+}
+[custom-input]{
+  display: flex;
+  padding-right: 0 !important;
+  overflow: hidden;
+}
+[custom-input] > input{
+  border: none;
+  flex: 1;
+  outline: none;
+  width: auto;
+}
+[custom-input] > .icon{
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+}
+
+[custom-input]:has(input:focus){
+  outline: 2px solid var(--theme-color);
+  outline-offset: -2px;
+  box-sizing: border-box;
+}
+input[type=button], input[type=submit], button{
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+  outline-color: none;
+  border-radius: 5px;
+  background-color: var(--theme-color);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:has(.spinner){
+  cursor:not-allowed;
+  opacity: .8;
+}
+.spinner{
+  height: calc(100% * var(--size, .6));
+  aspect-ratio: 1/1;
+  border: 3px solid white;
+  border-left-color: transparent;
+  border-radius: 100%;
+  animation: spinner .7s infinite linear;
+  opacity: .3;
+}
+@keyframes spinner {
+    from {rotate: 0deg;}
+    to {rotate: 360deg}
+}
+
+
+
+hr.divider{
+  border: none;
+  height: 1px;
+  background-color: rgb(var(--border-color));
+  margin: 10px 0;
+}
+
+.status{
+  font-size: 13px;
+  padding: 5px 6px;
+  background-color: #d1ffce;
+  color: #109f00;
+  border-radius: 3px;
+  word-break: break-all;
+}
+
+.status.error{
+  background-color: #ffcece;
+  color: #9f0000;
+}
