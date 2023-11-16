@@ -80,10 +80,10 @@ Feel free to reach out if you have any questions or issues.
 
 ## Configuration
 
-- Backend
+**Backend**
   
 Update applicaion.properties file with your sql and smtp.mail details
 
-- Frontend
+**Frontend**
 
 Update utils/Axios.js base url of the API
